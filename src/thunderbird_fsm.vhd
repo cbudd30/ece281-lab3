@@ -103,7 +103,7 @@ begin
 
 	-- CONCURRENT STATEMENTS --------------------------------------------------------	
 		-- Next state logic
-	f_Q_next(0) <= (f_Q(0) and (not i_left) and (not i_right)) or f_Q(1) or f_Q(5) or f_Q(7);
+	f_Q_next(0) <= (f_Q(0) and (not i_left) and (not i_right)) or f_Q(1) or f_Q(4) or f_Q(7);
 	f_Q_next(1) <= (i_left and i_right and f_Q(0));
 	f_Q_next(2) <= (not i_left) and i_right and f_Q(0);
 	f_Q_next(3) <= f_Q(2);

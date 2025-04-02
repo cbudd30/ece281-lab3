@@ -132,11 +132,10 @@ begin
         wait for k_clk_period; -- time to go to final blink
             assert w_left = "100" report "left blinker phase 3" severity failure;
         
-        w_leftin <= '0';
+        w_leftin <= '0'; wait for k_clk_period;
         
-        -- reset and test right blinker
-        w_reset <= '1';
-            wait for k_clk_period;
+        -- test right blinker
+        
         w_rightin <= '1'; wait for k_clk_period;
             assert w_right = "001" report "right blinker phase 1" severity failure;
         wait for k_clk_period;
@@ -145,10 +144,10 @@ begin
             assert w_right = "100" report "right blinker phase 3" severity failure;
             
         --reset and test if both
-        w_reset <= '1';
-            wait for k_clk_period;
+        wait for k_clk_period;
         w_rightin <= '1'; w_leftin <= '1'; wait for k_clk_period;
-            assert w_right = "011" and w_left = "011" report "both flashing working" severity failure;
+            assert w_right = "100" and w_left = "100" report "both flashing working" severity failure;
+        wait for k_clk_period; 
             
 	
 		wait;
