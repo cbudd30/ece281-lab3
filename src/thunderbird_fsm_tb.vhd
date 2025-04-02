@@ -146,7 +146,7 @@ begin
         --reset and test if both
         wait for k_clk_period;
         w_rightin <= '1'; w_leftin <= '1'; wait for k_clk_period;
-            assert w_right = "100" and w_left = "100" report "both flashing working" severity failure;
+            assert w_right = "111" and w_left = "111" report "both flashing working" severity failure;
         wait for k_clk_period; 
             
 	
