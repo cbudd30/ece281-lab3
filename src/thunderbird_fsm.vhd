@@ -114,12 +114,12 @@ begin
 	
 	
 	-- Output logic
-	o_lights_L(0) <= f_Q(1) or f_Q(5);
-	o_lights_L(1) <= f_Q(1) or f_Q(6);
+	o_lights_L(0) <= f_Q(1) or f_Q(5) or f_Q(6) or f_Q(7);
+	o_lights_L(1) <= f_Q(1) or f_Q(6) or f_Q(7);
 	o_lights_L(2) <= f_Q(1) or f_Q(7);
 	
-	o_lights_R(0) <= f_Q(1) or f_Q(2);
-	o_lights_R(1) <= f_Q(1) or f_Q(3);
+	o_lights_R(0) <= f_Q(1) or f_Q(2) or f_Q(3) or f_Q(4);
+	o_lights_R(1) <= f_Q(1) or f_Q(3) or f_Q(4);
 	o_lights_R(2) <= f_Q(1) or f_Q(4);
 	
     ---------------------------------------------------------------------------------
