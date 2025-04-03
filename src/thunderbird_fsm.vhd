@@ -118,9 +118,9 @@ begin
 	o_lights_L(1) <= f_Q(1) or f_Q(6) or f_Q(7);
 	o_lights_L(2) <= f_Q(1) or f_Q(7);
 	
-	o_lights_R(2) <= f_Q(1) or f_Q(2) or f_Q(3) or f_Q(4);
+	o_lights_R(0) <= f_Q(1) or f_Q(2) or f_Q(3) or f_Q(4);
 	o_lights_R(1) <= f_Q(1) or f_Q(3) or f_Q(4);
-	o_lights_R(0) <= f_Q(1) or f_Q(4);
+	o_lights_R(1) <= f_Q(1) or f_Q(4);
 	
     ---------------------------------------------------------------------------------
 	
